@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>EDITER POTIN</title>
+  </head>
+  <body>
+    
+    <h1>Editer un potin </h1>
+
+    <% gossips.each_with_index do |gossip, id| %>
+        <p>
+        <%= id + 1 %>- De <%= gossip.author %> :  <%= gossip.content %> 
+        </p>  
+    <% end %>
+    
+        
+
+    <h2> A vous de jouer !</h2>
+    <form action= '/gossip/edit' method='POST'>    
+        Numéro de potin  : <input type='number' name= 'id' min ="1"/><br/>
+        Changer l'auteur :  <input type='text' name= 'new_gossip_author'/><br/>
+        Changer le potin : <input type='text' name= 'new_gossip_content'/><br/>
+        <input type='submit'/>
+    </form>
+    
+
+    <p>  <a href="/">Menu principal</a> !</p>
+    
+  </body>
+</html>

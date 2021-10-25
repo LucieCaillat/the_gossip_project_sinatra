@@ -4,13 +4,16 @@
   </head>
   <body>
     
-    <h1>Voici le page du potin <%= params['id']%></h1>
+    <h1>Voici le page du potin "<%= params['id']%>"</h1>
     
     
     <p>
     Son auteur : <%= gossip.author %> </br>
     Le contenu du potin :  <%= gossip.content %>
     </p>
+
+    <p> <a href="/gossip/edit">Editer ce potin?</a></p>
+  
     
 
     <p>  <a href="/">Menu principal</a> !</p>
